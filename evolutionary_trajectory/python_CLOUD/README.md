@@ -137,43 +137,15 @@ where training_prefix is the prefix to training files outputted by PredictorCV, 
 
 The CLOUDPredictor function outputs the 5m predicted evolutionary parameters on each row for each of the duplicate genes in the test dataset to the file test_prefix.predictions. 
 
+---------------------------
+Formatting results
+---------------------------
+Given a triple list and classifications and predictions outputted by the CLOUDClassify and CLOUDPredict functions described in "Performing test classifications" and "Performing test predictions", we can format the results with the command:
 
-----------------------------
-Example application of CLOUD
-----------------------------
-Within the R environment, set the working directory to the directory containing both the CLOUD.r script and the subdirectory ExampleFiles containing the example files. 
-
-Load the functions of the CLOUD package by typing the command:
+  python run_CLOUD.py -Format_results 1 -E testing_prefix -DL duplicate_list
   
-  source("CLOUD.r")
-
-Next, generate a training dataset of 100 observations for each of the five classes at six tissues based on the single-copy and duplicate gene data in the ExampleFiles directory, and store the training data with prefix Training, by typing the command:
-
-  GenerateTrainingData(6, 100, "ExampleFiles/SingleData", "ExampleFiles/DuplicateData", "Training")
-
-The above operation will output the files Training.data, Training.features, Training.classes, and Training.responses.
+  eg. python run_CLOUD.py -Format_results 1 -E testing -DL Duplicate_list
   
-To train a CLOUD classifier on this training datset using five-fold cross-validation, with hyper parameters log(lambda) in {-5, -4, -3, -2, -1} and gamma in {0, 0.5, 1}, assuming a batch size of 50 observations per epoch and trained for 50 epochs, type the command:
+where testing_prefix is the prefix to the testing files outputted by GenerateTestingData applied to test data, duplicate_list is the triples of parent, child and ancestral genes list.
 
-  ClassifierCV(6, 50, 50, -5, -1, 5, 0, 1, 3, "Training")
- 
-The above operation will output the files Training.classifier_cv, Training.X_stdparams, and Training.classifier.hdf5.
-
-To train a CLOUD predictor on this training datset using five-fold cross-validation, with hyper parameters log(lambda) in {-5, -4, -3, -2, -1} and gamma in {0, 0.5, 1}, assuming a batch size of 50 observations per epoch and trained for 50 epochs, type the command:
-
-  PredictorCV(6, 50, 50, -5, -1, 5, 0, 1, 3, "Training")
- 
-The above operation will ouput the files Training.predictor_cv, Training.X_stdparams, Training.Y_stdparams, and Training.predictor.hdf5.
- 
-Then, generate a test dataset of 100 observations for each of the five classes at six tissues based on the single-copy and duplicate gene data located in the ExampleFiles directory, and store the testing data with prefix Testing, by typing the command:
-
-  GenerateTrainingData(6, 100, "ExampleFiles/SingleData", "ExampleFiles/DuplicateData", "Testing")
-
-The above operation will output the files Testing.data, Testing.features, Testing.classes, and Testing.responses. 
-
-Finally, to perform classification and predictions on these test data, type the commands:
-  
-  CLOUDClassify("Training", "Testing")
-  CLOUDPredict("Training", "Testing")
-  
-The two above operations will output the files Testing.classifications and Testing.predictions.
+The first three columns of The Format_Results Function Outputs are Triples, followed by Classification and Predict.
