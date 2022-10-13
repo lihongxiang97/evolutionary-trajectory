@@ -63,7 +63,9 @@ Generating training data from an OU process
 Given input single-copy and duplicate gene datasets as described in "Single-copy gene input file format" and "Duplicate gene input file format", respectively, training data can be generated with the command:
 
   python run_CLOUD.py -GenerateTrainingData 1 -m 6 -Nk 100 -S singlecopy_filename -D duplicate_filename -T training_prefix
+  
   eg. python run_CLOUD.py -GenerateTrainingData 1 -m 6 -Nk 100 -S SingleData -D DuplicateData -T training
+  
 where m is the number of conditions, Nk is the number of training observations for each of the five classes, singlecopy_filename is the dataset of single-copy genes described in "Single-copy gene input file format", duplicate_filename is the dataset of duplicate genes described in "Duplicate gene input file format", and training_prefix is the prefix to all files output by this function.
 
 -----------------------------
@@ -73,8 +75,9 @@ Given training data outputted by the 'GenerateTrainingData' function as describe
   
   python run_CLOUD.py -ClassifierCV 1 -m 6 -B batchsize -N num_epochs -T training_prefix -LMin log_lambda_min -LMax log_lambda_max -NL num_lambda -GMin gamma_min -GMax gamma_max -NG num_gamma 
   If -LMin, -LMax, -NL, -GMin, -GMax, -NG not setted, they were setted as default values:-5, -1, 5, 0, 1,3.
+  
   eg. python run_CLOUD.py -ClassifierCV 1 -m 6 -B 50 -N 50 -T training
-
+  
 where m is the number of conditions, batchsize is the number of training observations used in each epoch, num_epochs is the number of training epochs, hyper parameter lambda is drawn from log10(lambda) in interval [log_lambda_min, log_lambda_max] for num_lambda evenly spaced points, hyper parameter gamma is drawn from interval [gamma_min, gamma_max] for num_gamma evenly spaced points, and training_prefix is the prefix to all files outputted by this function.
 
 The ClassifierCV function outputs the set of optimal hyper parameters chosen through cross-validation to the file training_prefix.classifier_cv containing, the means and standard deviations of the input features used for standardizing the input during training to the file training_prefix.X_stdprams, and the fitted model in TensorFlow format to the file training_prefix.classifier.hdf5.
@@ -86,6 +89,7 @@ Given training data outputted by the 'GenerateTrainingData' function as describe
 
   python run_CLOUD.py -PredictorCV 1 -m 6 -B batchsize -N num_epochs -T training_prefix -LMin log_lambda_min -LMax log_lambda_max -NL num_lambda -GMin gamma_min -GMax gamma_max -NG num_gamma 
   If -LMin, -LMax, -NL, -GMin, -GMax, -NG not setted, they were setted as default values:-5, -1, 5, 0, 1,3.
+  
   eg. python run_CLOUD.py -PredictorCV 1 -m 6 -B 50 -N 50 -T training
 
 where m is the number of conditions, batchsize is the number of training observations used in each epoch, num_epochs is the number of training epochs, hyper parameter lambda is drawn from log10(lambda) in interval [log_lambda_min, log_lambda_max] for num_lambda evenly spaced points, hyper parameter gamma is drawn from interval [gamma_min, gamma_max] for num_gamma evenly spaced points, and training_prefix is the prefix to all files outputted by this function.
@@ -98,34 +102,40 @@ Generating testing data
 Given input single-copy and duplicate gene datasets as described in "Single-copy gene input file format" and "Duplicate gene input file format", respectively, testing data can be generated with the command:
 
   python run_CLOUD.py -GenerateTestingData 1 -m 6 -S singlecopy_filename -D duplicate_filename -E testing_prefix
+  
   eg. python run_CLOUD.py -GenerateTestingData 1 -m 6 -S SingleData -D DuplicateData -E testing
+  
 where m is the number of conditions, singlecopy_filename is the dataset of single-copy genes described in "Single-copy gene input file format", duplicate_filename is the dataset of duplicate genes described in "Duplicate gene input file format", and testing_prefix is the prefix to all files output by this function.
 
 -------------------------------
 Performing test classifications
 -------------------------------
-Given a trained classifier from the ClassifierCV function as described in "Training the CLOUD classifier" and an input test dataset with features outputted by the GenerateFeatures() function described in "Generating feature vector for duplicate genes", we can perform classification of the five classes of duplicate gene retention mechanisms on the test dataset with the command:
+Given a trained classifier from the ClassifierCV function as described in "Training the CLOUD classifier" and an input test dataset with features outputted by the GenerateTestingData function described in "Generating testing data", we can perform classification of the five classes of duplicate gene retention mechanisms on the test dataset with the command:
 
-  CLOUDClassify(training_prefix, testing_prefix)
+  python run_CLOUD.py -CLOUDClassify 1 -T training_prefix -E testing_prefix
+  
+  eg. python run_CLOUD.py -CLOUDClassify 1 -T training -E testing
+  
+where training_prefix is the prefix to training files outputted by ClasifierCV, and testing_prefix is the prefix to the testing files ouputted by GenerateTestingData applied to test data.
 
-where training_prefix is the prefix to training files outputted by ClasifierCV(), and testing_prefix is the prefix to the testing files ouputted by GenerateFeatures() applied to test data.
+**NOTE: The Expression Values for the Test DataSet will be automatically normalized, just enter the original value.
 
-**NOTE: It is assumed that the expression values for the test dataset are log10-transformed. Currently, users must perform this transformation themselves before applying GenerateFeatures() to the test dataset, but we will add this as an option in the future.
-
-The CLOUDCLassify() function outputs predicted classes on each row for each of the duplicate genes in the test dataset to the file test_prefix.classifications.
+The CLOUDCLassify function outputs predicted classes on each row for each of the duplicate genes in the test dataset to the file test_prefix.classifications.
 
 ---------------------------
 Performing test predictions
 ---------------------------
-Given a trained predictor from the PredictorCV() function as described in "Training the CLOUD predictor" and an input test dataset with features outputted by GenerateFeatures() function described in "Generating feature vector for duplicate genes", we can perform prediction of the 5m evolutionary model parameters (thetaP, thetaC, thetaA, alpha, and sigmaSq for each of the m conditions) on the test dataset with the command:
+Given a trained predictor from the PredictorCV function as described in "Training the CLOUD predictor" and an input test dataset with features outputted by the GenerateTestingData function described in "Generating testing data", we can perform prediction of the 5m evolutionary model parameters (thetaP, thetaC, thetaA, alpha, and sigmaSq for each of the m conditions) on the test dataset with the command:
 
-  CLOUDPredict(training_prefix, testing_prefix)
+  python run_CLOUD.py -CLOUDPredict 1 -T training_prefix -E testing_prefix
+  
+  eg. python run_CLOUD.py -CLOUDPredict 1 -T training -E testing
 
-where training_prefix is the prefix to training files outputted by PredictorCV(), and testing_prefix is the prefix to the testing files outputted by GenerateFeatures() applied to test data.
+where training_prefix is the prefix to training files outputted by PredictorCV, and testing_prefix is the prefix to the testing files outputted by GenerateTestingData applied to test data.
 
-**NOTE: It is assumed that the expression values for the test dataset are log10-transformed absolute expression. Currently the user must perform this transformation themselves before applying GenerateFeatures() to the test dataset, but we will add this as an option in the future.
+**NOTE: The Expression Values for the Test DataSet will be automatically normalized, just enter the original value.
 
-The CLOUDPredictor() function outputs the 5m predicted evolutionary parameters on each row for each of the duplicate genes in the test dataset to the file test_prefix.predictions. 
+The CLOUDPredictor function outputs the 5m predicted evolutionary parameters on each row for each of the duplicate genes in the test dataset to the file test_prefix.predictions. 
 
 
 ----------------------------
