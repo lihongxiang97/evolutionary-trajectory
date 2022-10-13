@@ -74,6 +74,7 @@ Training the python_CLOUD classifier
 Given training data outputted by the 'GenerateTrainingData' function as described in "Generating training dta from an OU processes", we can perform five-fold cross-validation to identify appropriate hyper parameters and fit the python_CLOUD classifier with two hidden layers (see DeGiorgio and Assis 2020) under optimal hyper parameters lambda and gamma with the command:
   
   python run_CLOUD.py -ClassifierCV 1 -m 6 -B batchsize -N num_epochs -T training_prefix -LMin log_lambda_min -LMax log_lambda_max -NL num_lambda -GMin gamma_min -GMax gamma_max -NG num_gamma 
+  
   If -LMin, -LMax, -NL, -GMin, -GMax, -NG not setted, they were setted as default values:-5, -1, 5, 0, 1,3.
   
   eg. python run_CLOUD.py -ClassifierCV 1 -m 6 -B 50 -N 50 -T training
@@ -88,6 +89,7 @@ Training the CLOUD predictor
 Given training data outputted by the 'GenerateTrainingData' function as described in "Generating training dta from an OU processes", we can perform five-fold cross-validation to identify appropriate hyper parameters and fit the python_CLOUD predictor with two hidden layers (see DeGiorgio and Assis 2020) under optimal hyper parameters lambda and gamma with the command:
 
   python run_CLOUD.py -PredictorCV 1 -m 6 -B batchsize -N num_epochs -T training_prefix -LMin log_lambda_min -LMax log_lambda_max -NL num_lambda -GMin gamma_min -GMax gamma_max -NG num_gamma 
+  
   If -LMin, -LMax, -NL, -GMin, -GMax, -NG not setted, they were setted as default values:-5, -1, 5, 0, 1,3.
   
   eg. python run_CLOUD.py -PredictorCV 1 -m 6 -B 50 -N 50 -T training
