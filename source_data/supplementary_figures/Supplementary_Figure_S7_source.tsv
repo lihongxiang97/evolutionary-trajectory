@@ -1,0 +1,49 @@
+binary_TPM1_class	CDROM_class	n	row_fraction	comparison	CLOUD_class
+Conservation	Conservation	413	0.77196261682243	Localization vs CDROM	
+Conservation	Neofunctionalization(Child)	46	0.08598130841121496	Localization vs CDROM	
+Conservation	Neofunctionalization(Parent)	34	0.06355140186915888	Localization vs CDROM	
+Conservation	Specialization	42	0.07850467289719626	Localization vs CDROM	
+Neofunctionalization(Child)	Conservation	244	0.3152454780361757	Localization vs CDROM	
+Neofunctionalization(Child)	Neofunctionalization(Child)	427	0.5516795865633075	Localization vs CDROM	
+Neofunctionalization(Child)	Neofunctionalization(Parent)	34	0.04392764857881137	Localization vs CDROM	
+Neofunctionalization(Child)	Specialization	69	0.08914728682170543	Localization vs CDROM	
+Neofunctionalization(Parent)	Conservation	72	0.45569620253164556	Localization vs CDROM	
+Neofunctionalization(Parent)	Neofunctionalization(Child)	6	0.0379746835443038	Localization vs CDROM	
+Neofunctionalization(Parent)	Neofunctionalization(Parent)	59	0.37341772151898733	Localization vs CDROM	
+Neofunctionalization(Parent)	Specialization	21	0.13291139240506328	Localization vs CDROM	
+Specialization	Conservation	125	0.1827485380116959	Localization vs CDROM	
+Specialization	Neofunctionalization(Child)	106	0.15497076023391812	Localization vs CDROM	
+Specialization	Neofunctionalization(Parent)	80	0.11695906432748537	Localization vs CDROM	
+Specialization	Specialization	373	0.5453216374269005	Localization vs CDROM	
+Conservation		147	0.42	Localization vs CLOUD	Conservation
+Conservation		104	0.29714285714285715	Localization vs CLOUD	Neofunctionalization(Child)
+Conservation		64	0.18285714285714286	Localization vs CLOUD	Neofunctionalization(Parent)
+Conservation		35	0.1	Localization vs CLOUD	Specialization
+Neofunctionalization(Child)		213	0.42943548387096775	Localization vs CLOUD	Conservation
+Neofunctionalization(Child)		149	0.3004032258064516	Localization vs CLOUD	Neofunctionalization(Child)
+Neofunctionalization(Child)		69	0.13911290322580644	Localization vs CLOUD	Neofunctionalization(Parent)
+Neofunctionalization(Child)		65	0.1310483870967742	Localization vs CLOUD	Specialization
+Neofunctionalization(Parent)		50	0.45454545454545453	Localization vs CLOUD	Conservation
+Neofunctionalization(Parent)		23	0.20909090909090908	Localization vs CLOUD	Neofunctionalization(Child)
+Neofunctionalization(Parent)		25	0.22727272727272727	Localization vs CLOUD	Neofunctionalization(Parent)
+Neofunctionalization(Parent)		12	0.10909090909090909	Localization vs CLOUD	Specialization
+Specialization		197	0.4053497942386831	Localization vs CLOUD	Conservation
+Specialization		121	0.24897119341563786	Localization vs CLOUD	Neofunctionalization(Child)
+Specialization		92	0.18930041152263374	Localization vs CLOUD	Neofunctionalization(Parent)
+Specialization		76	0.15637860082304528	Localization vs CLOUD	Specialization
+	Conservation	242	0.42984014209591476	CDROM vs CLOUD	Conservation
+	Conservation	154	0.27353463587921845	CDROM vs CLOUD	Neofunctionalization(Child)
+	Conservation	99	0.17584369449378331	CDROM vs CLOUD	Neofunctionalization(Parent)
+	Conservation	68	0.12078152753108348	CDROM vs CLOUD	Specialization
+	Neofunctionalization(Child)	155	0.4122340425531915	CDROM vs CLOUD	Conservation
+	Neofunctionalization(Child)	120	0.3191489361702128	CDROM vs CLOUD	Neofunctionalization(Child)
+	Neofunctionalization(Child)	50	0.13297872340425532	CDROM vs CLOUD	Neofunctionalization(Parent)
+	Neofunctionalization(Child)	51	0.1356382978723404	CDROM vs CLOUD	Specialization
+	Neofunctionalization(Parent)	62	0.41333333333333333	CDROM vs CLOUD	Conservation
+	Neofunctionalization(Parent)	41	0.2733333333333333	CDROM vs CLOUD	Neofunctionalization(Child)
+	Neofunctionalization(Parent)	31	0.20666666666666667	CDROM vs CLOUD	Neofunctionalization(Parent)
+	Neofunctionalization(Parent)	16	0.10666666666666667	CDROM vs CLOUD	Specialization
+	Specialization	145	0.4190751445086705	CDROM vs CLOUD	Conservation
+	Specialization	80	0.23121387283236994	CDROM vs CLOUD	Neofunctionalization(Child)
+	Specialization	68	0.19653179190751446	CDROM vs CLOUD	Neofunctionalization(Parent)
+	Specialization	53	0.1531791907514451	CDROM vs CLOUD	Specialization

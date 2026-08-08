@@ -1,0 +1,4 @@
+duplication_type	metric	comparison	test	n_young	n_old	median_young	median_old	statistic	p_raw	p_BH
+TD	ATAC TSS +/-1 kb	young vs old	Mann-Whitney U (Wilcoxon rank-sum)	649	1380	0.7095780938714743	0.9883988868128508	273116.0	1.020264892710436e-45	1.530397339065654e-45
+PD	ATAC TSS +/-1 kb	young vs old	Mann-Whitney U (Wilcoxon rank-sum)	591	1013	0.6075569940749557	0.8765554623678327	191210.5	1.28657668368132e-33	1.28657668368132e-33
+TRD	ATAC TSS +/-1 kb	young vs old	Mann-Whitney U (Wilcoxon rank-sum)	224	2170	0.5125137242274358	1.01205772308819	85144.0	7.794092351650906e-58	2.3382277054952715e-57

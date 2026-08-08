@@ -1,0 +1,13 @@
+loop_set	analysis_set	capture_state	n	n_pairs	fraction
+primary	all_primary_pairs	neither	1054	1290	0.8170542635658915
+primary	all_primary_pairs	both	31	1290	0.0240310077519379
+primary	all_primary_pairs	child_only	102	1290	0.0790697674418604
+primary	all_primary_pairs	parent_only	103	1290	0.07984496124031
+primary	TRD	neither	621	780	0.7961538461538461
+primary	TRD	both	12	780	0.0153846153846153
+primary	TRD	child_only	74	780	0.0948717948717948
+primary	TRD	parent_only	73	780	0.0935897435897435
+primary	TRD_multi_outgroup_polarized	neither	398	501	0.7944111776447106
+primary	TRD_multi_outgroup_polarized	both	6	501	0.0119760479041916
+primary	TRD_multi_outgroup_polarized	child_only	41	501	0.0818363273453093
+primary	TRD_multi_outgroup_polarized	parent_only	56	501	0.1117764471057884

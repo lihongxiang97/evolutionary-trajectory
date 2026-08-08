@@ -1,0 +1,4 @@
+duplication_type	metric	comparison	test	n_young	n_old	median_young	median_old	statistic	p_raw	p_BH
+TD	15-DAF expression	young vs old	Mann-Whitney U (Wilcoxon rank-sum)	649	1380	1.166173609635751	0.7168022452332443	483238.5	0.0037087457123400427	0.005563118568510064
+PD	15-DAF expression	young vs old	Mann-Whitney U (Wilcoxon rank-sum)	591	1013	0.7665213820507979	0.7724549399182279	302234.0	0.7446055368036729	0.7446055368036729
+TRD	15-DAF expression	young vs old	Mann-Whitney U (Wilcoxon rank-sum)	224	2170	0.0664564060070089	1.6301832504889564	152806.5	2.3176262149082372e-20	6.952878644724712e-20

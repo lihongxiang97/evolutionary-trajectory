@@ -1,0 +1,12 @@
+completed	2026-08-01T09:07:31+08:00
+metric	value
+stringent_RBH_pairs	34732
+RBH_with_core_features_both_haplotypes	34732
+age_classified_RBH_genes	4235
+mean_AtoB_identity_age_subset	98.403093
+metric	value
+core_RBH_genes	34732
+age_classified_RBH_genes	4235
+age_effect_direction_concordance	0.904762
+age_effect_direction_concordant_tests	19
+age_effect_tests	21

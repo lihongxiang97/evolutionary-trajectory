@@ -1,0 +1,5 @@
+metric	value
+stringent_RBH_pairs	34732.0
+RBH_with_core_features_both_haplotypes	34732.0
+age_classified_RBH_genes	4235.0
+mean_AtoB_identity_age_subset	98.403093

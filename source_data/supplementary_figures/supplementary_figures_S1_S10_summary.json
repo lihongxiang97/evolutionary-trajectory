@@ -1,0 +1,276 @@
+{
+  "S1_rows": 2436,
+  "S1_rep_correlations": [
+    {
+      "comparison": "rep1_vs_merged",
+      "spearman_rho": 0.966982475523888
+    },
+    {
+      "comparison": "rep2_vs_merged",
+      "spearman_rho": 0.9750313574868938
+    }
+  ],
+  "S2_summary": [
+    {
+      "sample": "rep1",
+      "n": 3180,
+      "median_kb": 110.0,
+      "mean_kb": 153.90251572327045
+    },
+    {
+      "sample": "rep2",
+      "n": 3516,
+      "median_kb": 100.0,
+      "mean_kb": 139.13822525597269
+    },
+    {
+      "sample": "merged",
+      "n": 3874,
+      "median_kb": 100.0,
+      "mean_kb": 126.62364481156428
+    }
+  ],
+  "S3_summary": [
+    {
+      "sample": "rep1",
+      "boundary_mean": 1.0639108287072743,
+      "distal_flank_mean": 0.9224757389916909,
+      "boundary_to_flank_ratio": 1.153321202647756
+    },
+    {
+      "sample": "rep2",
+      "boundary_mean": 1.0895762582241066,
+      "distal_flank_mean": 0.9425824001970359,
+      "boundary_to_flank_ratio": 1.155948018970377
+    }
+  ],
+  "S4_S5_summary": [
+    {
+      "figure": "S4",
+      "group": "Cis-associated",
+      "n": 35269,
+      "median_TPM": 5.002029,
+      "mean_log2_TPM_plus_1": 2.6330068954783514
+    },
+    {
+      "figure": "S4",
+      "group": "Trans-associated",
+      "n": 1827,
+      "median_TPM": 2.902613,
+      "mean_log2_TPM_plus_1": 2.2720390394160974
+    },
+    {
+      "figure": "S4",
+      "group": "No loop",
+      "n": 7812,
+      "median_TPM": 0.763331,
+      "mean_log2_TPM_plus_1": 1.913234390223241
+    },
+    {
+      "figure": "S5",
+      "group": "GGL-associated",
+      "n": 33799,
+      "median_TPM": 5.277173,
+      "mean_log2_TPM_plus_1": 2.665762024894456
+    },
+    {
+      "figure": "S5",
+      "group": "DGL-associated",
+      "n": 5205,
+      "median_TPM": 5.697926,
+      "mean_log2_TPM_plus_1": 2.6999584085177717
+    },
+    {
+      "figure": "S5",
+      "group": "No loop",
+      "n": 7812,
+      "median_TPM": 0.763331,
+      "mean_log2_TPM_plus_1": 1.913234390223241
+    }
+  ],
+  "S6_summary": [
+    {
+      "CLOUD_class": "Conservation",
+      "n": 768,
+      "median": 0.9450208696716427,
+      "mean": 0.8658251068020925
+    },
+    {
+      "CLOUD_class": "Neofunctionalization(Parent)",
+      "n": 297,
+      "median": 0.966627087296193,
+      "mean": 0.8755037080276894
+    },
+    {
+      "CLOUD_class": "Neofunctionalization(Child)",
+      "n": 506,
+      "median": 0.989886938786403,
+      "mean": 0.9008745907877438
+    },
+    {
+      "CLOUD_class": "Subfunctionalization",
+      "n": 919,
+      "median": 0.986754353331548,
+      "mean": 0.8946986940321411
+    },
+    {
+      "CLOUD_class": "Specialization",
+      "n": 238,
+      "median": 0.9008997354907253,
+      "mean": 0.8336341491933916
+    }
+  ],
+  "S7_summary": [
+    {
+      "comparison": "Localization vs CDROM",
+      "n": 2151,
+      "exact_agreement": 0.5913528591352859
+    },
+    {
+      "comparison": "Localization vs CLOUD",
+      "n": 1442,
+      "exact_agreement": 0.2753120665742025
+    },
+    {
+      "comparison": "CDROM vs CLOUD",
+      "n": 1435,
+      "exact_agreement": 0.310801393728223
+    }
+  ],
+  "S9_summary": [
+    {
+      "duplication_type": "TD",
+      "two_method_agreement": "Conservation",
+      "n": 86,
+      "median": 0.5020888793166475,
+      "mean": 0.5292773879625942
+    },
+    {
+      "duplication_type": "TD",
+      "two_method_agreement": "Specialization",
+      "n": 140,
+      "median": 0.7941679135258266,
+      "mean": 0.7807288264620021
+    },
+    {
+      "duplication_type": "TD",
+      "two_method_agreement": "Neofunctionalization(Child)",
+      "n": 48,
+      "median": 0.5338347015192646,
+      "mean": 0.5846901485654501
+    },
+    {
+      "duplication_type": "TD",
+      "two_method_agreement": "Neofunctionalization(Parent)",
+      "n": 32,
+      "median": 0.5991550251990455,
+      "mean": 0.6355445385927355
+    },
+    {
+      "duplication_type": "PD",
+      "two_method_agreement": "Specialization",
+      "n": 94,
+      "median": 0.7825975430464578,
+      "mean": 0.769702671664627
+    },
+    {
+      "duplication_type": "PD",
+      "two_method_agreement": "Conservation",
+      "n": 63,
+      "median": 0.4856514858128229,
+      "mean": 0.4931399606831347
+    },
+    {
+      "duplication_type": "PD",
+      "two_method_agreement": "Neofunctionalization(Child)",
+      "n": 24,
+      "median": 0.5867163616118124,
+      "mean": 0.5934574389530516
+    },
+    {
+      "duplication_type": "PD",
+      "two_method_agreement": "Neofunctionalization(Parent)",
+      "n": 23,
+      "median": 0.4415744104977117,
+      "mean": 0.4640872612720938
+    },
+    {
+      "duplication_type": "TRD",
+      "two_method_agreement": "Neofunctionalization(Child)",
+      "n": 361,
+      "median": 0.5172144627792571,
+      "mean": 0.5295964984734965
+    },
+    {
+      "duplication_type": "TRD",
+      "two_method_agreement": "Specialization",
+      "n": 145,
+      "median": 0.8570972363294622,
+      "mean": 0.8083762577434344
+    },
+    {
+      "duplication_type": "TRD",
+      "two_method_agreement": "Conservation",
+      "n": 268,
+      "median": 0.4593156154631878,
+      "mean": 0.46869949302225355
+    },
+    {
+      "duplication_type": "TRD",
+      "two_method_agreement": "Neofunctionalization(Parent)",
+      "n": 6,
+      "median": 0.555300789941279,
+      "mean": 0.5510124353118161
+    }
+  ],
+  "S10_summary": [
+    {
+      "trajectory": "Conservation",
+      "duplicate_member": "Parent",
+      "n": 417,
+      "spearman_rho": 0.20820207024427162
+    },
+    {
+      "trajectory": "Conservation",
+      "duplicate_member": "Child",
+      "n": 417,
+      "spearman_rho": 0.18156764926293475
+    },
+    {
+      "trajectory": "Neofunctionalization(Child)",
+      "duplicate_member": "Parent",
+      "n": 433,
+      "spearman_rho": 0.3990944661641511
+    },
+    {
+      "trajectory": "Neofunctionalization(Child)",
+      "duplicate_member": "Child",
+      "n": 433,
+      "spearman_rho": -0.1799512855565747
+    },
+    {
+      "trajectory": "Neofunctionalization(Parent)",
+      "duplicate_member": "Parent",
+      "n": 61,
+      "spearman_rho": -0.032469981140697456
+    },
+    {
+      "trajectory": "Neofunctionalization(Parent)",
+      "duplicate_member": "Child",
+      "n": 61,
+      "spearman_rho": 0.5397287079810593
+    },
+    {
+      "trajectory": "Specialization",
+      "duplicate_member": "Parent",
+      "n": 379,
+      "spearman_rho": -0.202084521379095
+    },
+    {
+      "trajectory": "Specialization",
+      "duplicate_member": "Child",
+      "n": 379,
+      "spearman_rho": -0.14210417200017597
+    }
+  ]
+}

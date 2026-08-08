@@ -1,0 +1,4 @@
+analysis_set	loop_set	child_only_n	parent_only_n	discordant_n	child_fraction_among_discordant	p_value	p_adj_BH
+all_primary_pairs	primary	102	103	205	0.4975609756097561	1.0	1.0
+TRD	primary	74	73	147	0.5034013605442177	1.0	1.0
+TRD_multi_outgroup_polarized	primary	41	56	97	0.422680412371134	0.154815785034429	0.9631724981560064

@@ -1,0 +1,9 @@
+loop_set	analysis_set	child_only_n	parent_only_n	discordant_n	child_fraction_among_discordant	p_value	p_adj_BH
+primary	all_primary_pairs	102	103	205	0.4975609756097561	1.0	1.0
+primary	TRD	74	73	147	0.5034013605442177	1.0	1.0
+primary	TRD_peach_polarized	73	73	146	0.5	1.0	1.0
+primary	TRD_multi_outgroup_polarized	41	56	97	0.422680412371134	0.154815785034429	0.9631724981560064
+strict	all_primary_pairs	86	87	173	0.49710982658959535	1.0	1.0
+strict	TRD	65	63	128	0.5078125	0.9296139078299851	1.0
+strict	TRD_peach_polarized	64	63	127	0.5039370078740157	1.0	1.0
+strict	TRD_multi_outgroup_polarized	38	50	88	0.4318181818181818	0.2407931245390016	0.9631724981560064

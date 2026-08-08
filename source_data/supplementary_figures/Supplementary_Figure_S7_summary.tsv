@@ -1,0 +1,4 @@
+comparison	n	exact_agreement
+Localization vs CDROM	2151	0.5913528591352859
+Localization vs CLOUD	1442	0.2753120665742025
+CDROM vs CLOUD	1435	0.310801393728223

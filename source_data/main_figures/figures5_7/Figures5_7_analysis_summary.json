@@ -1,0 +1,36 @@
+{
+  "age_thresholds": {
+    "Pbr_hapA-Ppe": 0.4748556238114924,
+    "Pbr_hapA-Mdo": 0.1122884290667846
+  },
+  "valid_pair_age_counts": {
+    "PD|old": 623,
+    "PD|young": 475,
+    "TD|old": 800,
+    "TD|young": 539,
+    "TRD|old": 1233,
+    "TRD|young": 213
+  },
+  "two_method_pair_counts": {
+    "PD|old": 91,
+    "PD|young": 70,
+    "TD|old": 140,
+    "TD|young": 90,
+    "TRD|old": 398,
+    "TRD|young": 43
+  },
+  "resolved_gene_counts": {
+    "PD|old": 1013,
+    "PD|young": 591,
+    "TD|old": 1380,
+    "TD|young": 649,
+    "TRD|old": 2170,
+    "TRD|young": 224
+  },
+  "genes_with_conflicting_occurrence_calls": 105,
+  "gene_age_resolution_rule": "young if any valid occurrence was young; otherwise old",
+  "ATAC_profile": "two-replicate mean; 2-kb upstream + normalized gene body + 2-kb downstream; 20+40+20 bins",
+  "TAD_boundary_window_bp": 20000,
+  "contact_metric": "log2(1 + TSS 5-kb-bin marginal contact count / sum of all bin marginal counts * 1e6)",
+  "contact_marginal_sum": 605503534.0
+}

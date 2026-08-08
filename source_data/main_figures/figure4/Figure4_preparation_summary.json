@@ -1,0 +1,23 @@
+{
+  "trajectory_pairs": 1290,
+  "singlecopy_reference_genes": 4842,
+  "unique_genes_with_tss": 7094,
+  "role_records": {
+    "Con|C": 417,
+    "Con|P": 417,
+    "Con|S": 4842,
+    "Neo(C)|C": 433,
+    "Neo(C)|P": 433,
+    "Neo(C)|S": 4842,
+    "Neo(P)|C": 61,
+    "Neo(P)|P": 61,
+    "Neo(P)|S": 4842,
+    "Spe|C": 379,
+    "Spe|P": 379,
+    "Spe|S": 4842
+  },
+  "reference_note": "Single is a pear-peach one-to-one single-copy pear-gene chromatin reference; no peach Hi-C/ATAC data are used.",
+  "TAD_boundary_window_bp": 20000,
+  "ATAC_window_bp": 3000,
+  "ATAC_bin_bp": 100
+}

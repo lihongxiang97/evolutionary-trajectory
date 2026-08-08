@@ -1,0 +1,9 @@
+{
+  "trajectory_pairs": 1290,
+  "reference_genes": 4842,
+  "ATAC_tests": 12,
+  "compartment_tests": 12,
+  "TAD_tests": 12,
+  "loop_tests": 36,
+  "reference_definition": "Single = pear gene retained as a one-to-one pear-peach single-copy ortholog; no peach Hi-C/ATAC data are used."
+}

@@ -1,0 +1,23 @@
+hapA_capture_delta	hapB_capture_delta	n	metric	hapA_capture_delta_strict	hapB_capture_delta_strict	hapA_same_TAD	hapB_same_TAD
+-1.0	-1.0	29	Capture delta (primary)				
+-1.0	0.0	30	Capture delta (primary)				
+-1.0	1.0	2	Capture delta (primary)				
+0.0	-1.0	27	Capture delta (primary)				
+0.0	0.0	513	Capture delta (primary)				
+0.0	1.0	30	Capture delta (primary)				
+1.0	-1.0	1	Capture delta (primary)				
+1.0	0.0	35	Capture delta (primary)				
+1.0	1.0	30	Capture delta (primary)				
+		25	Capture delta (strict)	-1.0	-1.0		
+		23	Capture delta (strict)	-1.0	0.0		
+		1	Capture delta (strict)	-1.0	1.0		
+		25	Capture delta (strict)	0.0	-1.0		
+		539	Capture delta (strict)	0.0	0.0		
+		29	Capture delta (strict)	0.0	1.0		
+		1	Capture delta (strict)	1.0	-1.0		
+		28	Capture delta (strict)	1.0	0.0		
+		26	Capture delta (strict)	1.0	1.0		
+		417	Same-TAD status			0.0	0.0
+		20	Same-TAD status			0.0	1.0
+		13	Same-TAD status			1.0	0.0
+		247	Same-TAD status			1.0	1.0

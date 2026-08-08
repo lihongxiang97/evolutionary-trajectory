@@ -1,0 +1,10 @@
+RepeatModeler=2.0.7
+RepeatMasker=4.2.4
+family_classifier=Dfam_4.0_RepeatMasker_consensus
+family_classifier_url=https://www.dfam.org/releases/current/families/Dfam-RepeatMasker.lib.gz
+repeat_peps_source=/storage3/lihongxiang/lihongxiang-storage1/soft/repeatmasker/share/RepeatMasker/Libraries/RepeatPeps.lib
+repeat_peps_records=18011
+repeat_peps_sha256=bd06d19e72c30a3c62e45c8aff4cb9b4d3abf62b0142a4ed7c0c9e3859a272c3
+statistics_python=/storage2/lihongxiang/Project/26.3D_evolution/05.software_envs/section1_hicexplorer/bin/python
+library_records=2020
+annotation_rows=662134

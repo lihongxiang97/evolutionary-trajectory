@@ -1,0 +1,15 @@
+{
+  "three_method_consensus_n": 261,
+  "by_duplication_type": {
+    "TRD": 167,
+    "TD": 55,
+    "PD": 39
+  },
+  "by_trajectory": {
+    "Conservation": 119,
+    "Neofunctionalization(Child)": 87,
+    "Specialization": 44,
+    "Neofunctionalization(Parent)": 11
+  },
+  "tests": 36
+}

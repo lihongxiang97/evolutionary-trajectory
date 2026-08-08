@@ -1,0 +1,6 @@
+completed	2026-08-01T06:25:46+08:00
+repair_strategy	full_name_set_audit_and_exact_R1_recovery
+recovered_R1_reads	35880
+rep1_allValidPairs	145791535
+rep2_allValidPairs	158943287
+merged_allValidPairs	304726362

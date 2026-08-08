@@ -1,0 +1,8 @@
+metric	n_pairs	agreement_fraction
+capture_delta_exact_agreement	697	0.8206599713055954
+capture_direction_agreement	697	0.8206599713055954
+capture_delta_exact_agreement_strict	697	0.8464849354375896
+capture_direction_agreement_strict	697	0.8464849354375896
+same_TAD_agreement	697	0.9526542324246772
+hapA_same_TAD_fraction	697	0.37302725968436157
+hapB_same_TAD_fraction	697	0.3830703012912482

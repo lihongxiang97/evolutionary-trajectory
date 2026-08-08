@@ -38,24 +38,36 @@ duplicate-gene evolutionary classifications.
 .
 ├── scripts/                         Analysis, plotting and package-audit code
 ├── source_data/
-│   ├── figure2/                     Four-class consensus source tables
-│   ├── hapB_validation/             Supplementary Table 17 source results
-│   └── supplementary_figure_s1/     Contact-decay source data and summary
+│   ├── main_figures/                Figure 1–8 plotting tables and tracks
+│   └── supplementary_figures/       Supplementary Figure S1–S18 sources
+├── analysis_results/
+│   ├── 3D_duplicate_mechanisms/     Pair- and gene-level 3D analyses
+│   ├── Haplotype_Validation/         Full hapA–hapB validation results
+│   └── Risk_Audit/                   TE and annotation sensitivity analyses
 ├── requirements.txt                 Python dependencies
 └── README.md
 ```
 
-The repository intentionally contains compact source tables and executable
-analysis code, not raw sequencing reads, genome assemblies or large Hi-C
-matrices.
+The repository contains the numerical source data used for all main and
+supplementary figures, together with the compact intermediate and final
+statistics needed to audit the reported results. It intentionally excludes raw
+sequencing reads, genome assemblies, BAM files and large Hi-C matrices; those
+inputs are regenerated from the public accessions and assembly resources.
+`FIGURE_SOURCE_MAP.tsv` provides the direct figure-to-data-to-script mapping,
+and `source_data/SOURCE_DATA_INDEX.tsv` records file sizes and SHA-256 hashes.
 
 ## Main scripts
 
 - `scripts/analyze_haplotype_validation.py`: hapA–hapB feature and age-effect
   validation.
+- `scripts/make_figure1.py`: assembly of the whole-genome, chromosome, TAD and
+  circular-loop panels from contact maps and numerical tracks.
 - `scripts/make_figure2_two_method.py`: Figure 2 using the primary four-class
   two-method consensus.
 - `scripts/make_figure4_two_method.py`: duplicate-copy chromatin-state plots.
+- `scripts/make_figure3_two_method.py`, `prepare_figure3_data.py` and
+  `prepare_figure4_data.py`: Figure 3 and Figure 4 source-data preparation and
+  plotting.
 - `scripts/make_figure5_revised_v2.py`, `make_figure6.py`, `make_figure7.py`:
   downstream evolutionary and chromatin analyses.
 - `scripts/make_supplementary_figures_v3.py`: replicate and robustness

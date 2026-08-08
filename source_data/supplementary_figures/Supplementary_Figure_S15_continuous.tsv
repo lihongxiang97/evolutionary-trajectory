@@ -1,0 +1,5 @@
+metric	n	spearman_rho	pvalue
+fruit_expression	34732	0.9902635119058668	0.0
+compartment_PC1	34732	0.7859457511458614	0.0
+TSS_ATAC	4235	0.867863787501114	0.0
+marginal_contact	4235	0.698173065935342	0.0

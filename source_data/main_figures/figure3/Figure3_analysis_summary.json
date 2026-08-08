@@ -1,0 +1,34 @@
+{
+  "two_method_consensus_pairs": 1290,
+  "valid_kaks_pairs": 1272,
+  "tau_tests": 36,
+  "kaks_tests": 0,
+  "tau_panel_counts": {
+    "Conservation|PD": 63,
+    "Conservation|TD": 86,
+    "Conservation|TRD": 268,
+    "Neofunctionalization(Child)|PD": 24,
+    "Neofunctionalization(Child)|TD": 48,
+    "Neofunctionalization(Child)|TRD": 361,
+    "Neofunctionalization(Parent)|PD": 23,
+    "Neofunctionalization(Parent)|TD": 32,
+    "Neofunctionalization(Parent)|TRD": 6,
+    "Specialization|PD": 94,
+    "Specialization|TD": 140,
+    "Specialization|TRD": 145
+  },
+  "kaks_panel_counts": {
+    "Conservation|PD": 61,
+    "Conservation|TD": 85,
+    "Conservation|TRD": 267,
+    "Neofunctionalization(Child)|PD": 23,
+    "Neofunctionalization(Child)|TD": 48,
+    "Neofunctionalization(Child)|TRD": 356,
+    "Neofunctionalization(Parent)|PD": 21,
+    "Neofunctionalization(Parent)|TD": 32,
+    "Neofunctionalization(Parent)|TRD": 6,
+    "Specialization|PD": 90,
+    "Specialization|TD": 139,
+    "Specialization|TRD": 144
+  }
+}

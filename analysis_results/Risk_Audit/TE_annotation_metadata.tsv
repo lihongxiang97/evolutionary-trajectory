@@ -1,0 +1,2 @@
+analysis	repeat_library_records	RepeatMasker_annotation_rows	bootstrap_iterations	bootstrap_seed	library_path	RepeatMasker_out_path
+hapA_de_novo_TE_sensitivity	2020	662134	2000	20260728	/storage2/lihongxiang/Project/26.3D_evolution/03.analysis/hapA/04.evolution/13.risk_audit/te_denovo/repeatmodeler/consensi.fa.classified	/storage2/lihongxiang/Project/26.3D_evolution/03.analysis/hapA/04.evolution/13.risk_audit/te_denovo/repeatmasker/DS_hapA.fasta.out
