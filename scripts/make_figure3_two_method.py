@@ -3,19 +3,29 @@ from pathlib import Path
 import json
 import numpy as np
 import pandas as pd
+import matplotlib as mpl
 import matplotlib.pyplot as plt
 from scipy.stats import wilcoxon
 from PIL import Image
-from make_figure3_two_method import (
+from figure3_helpers import (
     CLASSES, SHORT, ROLES, RCOL, CCOL, bh, stars, bracket, draw_box
 )
 
-ROOT = Path(__file__).resolve().parent
-SRC = ROOT / "source"
-OUT = ROOT / "output"
-OUT.mkdir(exist_ok=True)
+ROOT = Path(__file__).resolve().parents[1]
+SRC = ROOT / "source_data" / "main_figures" / "figure3"
+OUT = ROOT / "output" / "figure3"
+OUT.mkdir(parents=True, exist_ok=True)
 TYPES = ["TD", "PD", "TRD"]
 TAU_COL = {"P": "parent_tau", "C": "child_tau", "A": "ancestor_tau"}
+
+mpl.rcParams.update({
+    "font.family": "sans-serif",
+    "font.sans-serif": ["Arial", "Helvetica", "DejaVu Sans", "sans-serif"],
+    "svg.fonttype": "none",
+    "pdf.fonttype": 42,
+    "ps.fonttype": 42,
+    "text.usetex": False,
+})
 
 
 def draw_tau_grid(fig, grid, data):
@@ -47,7 +57,9 @@ def draw_tau_grid(fig, grid, data):
             if ri == 0:
                 ax.set_title(dtype, fontsize=9, weight="bold", pad=5)
             if ci == 0:
-                ax.set_ylabel(r"Tissue specificity index ($\tau$)")
+                # Keep the complete axis title as one editable text object.
+                # Unicode tau avoids splitting normal text and mathtext on export.
+                ax.set_ylabel("Tissue specificity index (τ)")
                 ax.text(
                     -0.38, 0.5, SHORT[trajectory], transform=ax.transAxes,
                     ha="right", va="center", fontsize=9, weight="bold"
