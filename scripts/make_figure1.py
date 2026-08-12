@@ -24,11 +24,15 @@ import pandas as pd
 from PIL import Image
 
 HERE = Path(__file__).resolve().parent
+ROOT = HERE.parent
 sys.path.insert(0, str(HERE))
-from make_figure1 import read_bg, add_label, crop_white  # noqa: E402
+from make_figure1_base import read_bg, add_label, crop_white  # noqa: E402
 from make_figure1_v4 import matrix_crop, clean, vertical_gradient  # noqa: E402
 
-SRC, TRACK, OUT = HERE / "source", HERE / "source" / "tracks", HERE / "output"
+SRC = ROOT / "source_data" / "main_figures" / "figure1"
+TRACK = SRC / "tracks"
+OUT = ROOT / "output" / "figure1"
+OUT.mkdir(parents=True, exist_ok=True)
 RED, BLUE = "#C94B44", "#4F75B5"
 GOLD, TEAL, PURPLE, DARK = "#D5A11E", "#368C8C", "#8A6BA8", "#3E3E3E"
 CHR_COLORS = [

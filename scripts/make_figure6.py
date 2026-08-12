@@ -16,9 +16,10 @@ from figure_utils import (
 )
 
 
-ROOT = Path(__file__).resolve().parent
-SRC = ROOT / "source"
-OUT = ROOT / "output"
+ROOT = Path(__file__).resolve().parents[1]
+SRC = ROOT / "source_data" / "main_figures" / "figures5_7"
+OUT = ROOT / "output" / "figure6"
+OUT.mkdir(parents=True, exist_ok=True)
 TYPES = ["TD", "PD", "TRD"]
 AGES = ["young", "old"]
 
@@ -48,7 +49,7 @@ def expression_boxplot(ax, data, tests, duplication_type, show_ylabel=False):
         [f"Young\nn={len(values[0])}", f"Old\nn={len(values[1])}"],
     )
     ax.set_title(duplication_type, fontsize=9, weight="bold", pad=4)
-    ax.set_ylabel("log2(TPM + 1)")
+    ax.set_ylabel(r"log$_2$(TPM + 1)")
 
     row = tests[tests["duplication_type"] == duplication_type].iloc[0]
     ymax = max(np.quantile(values[0], 0.98), np.quantile(values[1], 0.98))
@@ -91,6 +92,9 @@ def atac_profile(ax, profile, duplication_type, show_ylabel=False):
     ax.set_xticks([0, 19.5, 59.5, 79], ["−2 kb", "TSS", "TES", "+2 kb"])
     ax.set_xlabel("Scaled gene region")
     ax.set_ylabel("ATAC signal (RPGC)")
+    if duplication_type == "PD":
+        ax.set_ylim(0.4, 1.2)
+        ax.set_yticks([0.4, 0.6, 0.8, 1.0, 1.2])
     counts = {
         age: int(
             block.loc[block["age"] == age, "count"].dropna().max()
@@ -164,4 +168,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

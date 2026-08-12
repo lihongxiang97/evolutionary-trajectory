@@ -3,8 +3,11 @@ Figure 1	source_data/main_figures/figure1	scripts/make_figure1.py	merged and rep
 Figure 2	source_data/main_figures/figure2	scripts/make_figure2_two_method.py	multi-tissue expression input
 Figure 3	source_data/main_figures/figure3	scripts/prepare_figure3_data.py; scripts/make_figure3_two_method.py	comparative-genomics primary alignments
 Figure 4	source_data/main_figures/figure4	scripts/prepare_figure4_data.py; scripts/make_figure4_two_method.py	ATAC BAM/bigWig inputs
-Figures 5-7	source_data/main_figures/figures5_7	scripts/make_figure5_revised_v2.py; scripts/make_figure6.py; scripts/make_figure7.py	genome annotations and primary expression matrices
+Figure 5	source_data/main_figures/figures5_7	scripts/make_figure5_revised_v2.py	genome annotations and comparative-genomics alignments
+Figure 6	source_data/main_figures/figures5_7	scripts/make_figure6.py	primary expression and ATAC-seq alignments
+Figure 7	source_data/main_figures/figures5_7	scripts/make_figure7.py	large Hi-C feature matrices
 Figure 8	source_data/main_figures/figure8	scripts/make_new_framework_figures.py	large Hi-C and ATAC feature matrices
-Supplementary Figures S1-S10	source_data/supplementary_figures	scripts/make_supplementary_figures_v3.py	replicate Hi-C matrices and alignment files
+Supplementary Figure S1	source_data/supplementary_figures; source_data/supplementary_figures/contact_decay_full	scripts/make_supplementary_figure_s1.py	replicate Hi-C matrices
+Supplementary Figures S2-S10	source_data/supplementary_figures	scripts/make_supplementary_figures_v3.py	replicate Hi-C matrices and alignment files
 Supplementary Figures S11-S15	source_data/supplementary_figures	scripts/make_risk_figures.py; scripts/make_te_sensitivity_figure.py	genome annotation and RepeatMasker primary output
 Supplementary Figures S16-S18	source_data/supplementary_figures	scripts/make_new_framework_figures.py	hapA and hapB large feature matrices

@@ -1,3 +1,4 @@
-comparison	spearman_rho
-rep1_vs_merged	0.966982475523888
-rep2_vs_merged	0.9750313574868938
+series	minimum_possible_bin_pairs	displayed_distance_bins	maximum_displayed_distance_bp	spearman_rho_distance_vs_mean_contact	spearman_p
+Replicate 1	500	594	29700000	-0.8966401584395828	1.2430409795353968e-211
+Replicate 2	500	594	29700000	-0.7647270671772208	4.299596470673433e-115
+Merged	500	594	29700000	-0.8337190545899998	8.130920044556437e-155

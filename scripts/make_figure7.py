@@ -17,9 +17,10 @@ from figure_utils import (
 )
 
 
-ROOT = Path(__file__).resolve().parent
-SRC = ROOT / "source"
-OUT = ROOT / "output"
+ROOT = Path(__file__).resolve().parents[1]
+SRC = ROOT / "source_data" / "main_figures" / "figures5_7"
+OUT = ROOT / "output" / "figure7"
+OUT.mkdir(parents=True, exist_ok=True)
 TYPES = ["TD", "PD", "TRD"]
 AGES = ["young", "old"]
 COMP_COLORS = {"A": "#E9C46A", "B": "#4C78A8"}
@@ -191,4 +192,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

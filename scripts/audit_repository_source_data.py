@@ -30,7 +30,7 @@ def main() -> None:
         )),
         SOURCE / "supplementary_figures",
         ROOT / "analysis_results" / "3D_duplicate_mechanisms",
-        ROOT / "analysis_results" / "Haplotype_Validation",
+        ROOT / "analysis_results" / "Cross_Haplotype_Robustness",
         ROOT / "analysis_results" / "Risk_Audit",
     ]
     missing = [str(path.relative_to(ROOT)) for path in expected if not path.is_dir()]
@@ -41,7 +41,7 @@ def main() -> None:
         rows = list(csv.DictReader(handle, delimiter="\t"))
     failures: list[str] = []
     for row in rows:
-        path = SOURCE / row["path"]
+        path = ROOT / row["path"]
         if not path.is_file():
             failures.append(f"missing: {row['path']}")
             continue

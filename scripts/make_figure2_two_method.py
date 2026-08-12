@@ -10,10 +10,10 @@ from matplotlib.lines import Line2D
 from scipy.stats import wilcoxon
 from PIL import Image
 
-ROOT = Path(__file__).resolve().parent
-SRC = ROOT / "source/trajectory_classifications_three_methods.tsv"
-OUT = ROOT / "output"
-OUT.mkdir(exist_ok=True)
+ROOT = Path(__file__).resolve().parents[1]
+SRC = ROOT / "source_data" / "main_figures" / "figure2" / "trajectory_classifications_three_methods.tsv"
+OUT = ROOT / "output" / "figure2"
+OUT.mkdir(parents=True, exist_ok=True)
 
 CLASSES = ["Conservation", "Neofunctionalization(Child)",
            "Neofunctionalization(Parent)", "Specialization"]

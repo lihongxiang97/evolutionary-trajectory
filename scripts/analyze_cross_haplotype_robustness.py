@@ -364,7 +364,7 @@ def main():
         args.outdir / "hapB_adjusted_age_models.tsv", sep="\t", index=False
     )
 
-    with (args.outdir / "haplotype_validation_summary.tsv").open("w") as output:
+    with (args.outdir / "cross_haplotype_robustness_summary.tsv").open("w") as output:
         output.write("metric\tvalue\n")
         output.write(f"core_RBH_genes\t{len(all_features)}\n")
         output.write(f"age_classified_RBH_genes\t{len(age)}\n")

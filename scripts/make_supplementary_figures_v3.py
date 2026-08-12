@@ -114,11 +114,9 @@ def load_contact_decay(source_dir: Path) -> pd.DataFrame:
             (frame["distance_bp"] > 0)
             & (frame["mean_contact_per_possible_pair"] > 0)
         ].copy()
-        # Remove the sparsely supported extreme-distance tail. At these
-        # separations only a handful of chromosome-bin pairs remain and the
-        # mean becomes unstable. Retain bins supported by at least 10% of the
-        # sample-specific maximum number of possible bin pairs (and >=1,000).
-        support_cutoff = max(1000, int(np.ceil(frame["possible_bin_pairs"].max() * 0.10)))
+        # Remove the sparsely supported extreme-distance tail using a rule
+        # fixed independently of the plotted curve shape.
+        support_cutoff = 500
         frame = frame[frame["possible_bin_pairs"] >= support_cutoff].copy()
         frame["support_cutoff_possible_pairs"] = support_cutoff
         tables.append(frame)

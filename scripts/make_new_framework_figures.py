@@ -169,7 +169,7 @@ def main_figure(data_dir, outdir, source_dir):
     c.to_csv(source_dir / "Figure8C_capture_models.tsv", sep="\t", index=False)
     d.to_csv(source_dir / "Figure8D_TAD_coresidence.tsv", sep="\t", index=False)
     e.to_csv(source_dir / "Figure8E_coexpression_models.tsv", sep="\t", index=False)
-    f.to_csv(source_dir / "Figure8F_haplotype_validation.tsv", sep="\t", index=False)
+    f.to_csv(source_dir / "Figure8F_cross_haplotype_robustness.tsv", sep="\t", index=False)
     plt.close(fig)
 
 

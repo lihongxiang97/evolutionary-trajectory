@@ -17,10 +17,10 @@ from scipy.stats import (
 )
 from PIL import Image
 
-ROOT = Path(__file__).resolve().parent
-SRC = ROOT / "source"
-OUT = ROOT / "output"
-OUT.mkdir(exist_ok=True)
+ROOT = Path(__file__).resolve().parents[1]
+SRC = ROOT / "source_data" / "main_figures" / "figure4"
+OUT = ROOT / "output" / "figure4"
+OUT.mkdir(parents=True, exist_ok=True)
 
 TRAJECTORIES = ["Con", "Neo(C)", "Neo(P)", "Spe"]
 ROLES = ["P", "C", "S"]
