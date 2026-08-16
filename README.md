@@ -79,14 +79,6 @@ and writes regenerated files under `output/`. Figure 1 requires the large
 merged and replicate Hi-C matrices listed in `FIGURE_SOURCE_MAP.tsv`; compact
 tracks and loop tables are included here.
 
-## Contact-decay support rule
-
-Supplementary Figure S1 omits the low-support extreme-distance tail. A
-distance bin is displayed only when at least 500 chromosome-bin pairs are
-possible. This threshold is fixed independently of curve shape. The complete
-unfiltered table, the displayed subset and per-map summaries are all retained
-under `source_data/supplementary_figures/`.
-
 ## Installation and checks
 
 ```bash
